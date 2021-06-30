@@ -13,6 +13,17 @@
   
     
         ,"post1": {
+            "title": "You've learned the syntax, now level up your coding",
+            "content": "So you’ve read a few books, followed a few tutorials, maybe attended a bootcamp. By now you should know the syntax pretty well, but to be able to work comfortably with a language or pass technical interviews you will need to build fluency in it. This is not unlike building virtuosity on a musical instrument, except in this case rather than practicing pieces of music you hack away at coding exercises. . I list a few good places to go for such exercises on How to build fluency in a programming language, a new post up on my Medium account. .",
+            "url": "https://cmondorf.github.io/blog/2018/05/28/level-up-coding-skills.html",
+            "relUrl": "/2018/05/28/level-up-coding-skills.html",
+            "date": " • May 28, 2018"
+        }
+        
+    
+  
+    
+        ,"post2": {
             "title": "Can artificial intelligence rescue threatened languages?",
             "content": "Will AI and machine translation kill off the drive to learn foreign languages, or will it help save them? . New post up on FlowingTensors. .",
             "url": "https://cmondorf.github.io/blog/2018/03/14/can-AI-rescue-threatened-languages.html",
@@ -23,7 +34,7 @@
     
   
     
-        ,"post2": {
+        ,"post3": {
             "title": "Self-driving cars aren't cars",
             "content": "It’s hard to know what self-driving cars will be like, but they won’t be cars. The fact that we can only refer to them as such when discussing them says more about how heavily their legacy weighs on our psyche than it does about them. That’s the point I made in a brief Medium post last year. .",
             "url": "https://cmondorf.github.io/blog/2018/03/08/self-driving-cars-arent-cars.html",
