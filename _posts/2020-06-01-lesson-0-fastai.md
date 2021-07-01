@@ -1,8 +1,9 @@
 ---
 layout: post
-title: Thoughts on _Lesson 0: How to fast.ai_
+title: Thoughts on Lesson 0 - How to fastai
 subtitle: The lecture before the first lecture
 ---
+
 
 Recently, a new lesson was added to the fast.ai course. This lesson wasn't added to the end of the lessons already posted, but instead is meant to be seen before the current set of published lessons. In this post I highlight a few key points that struck me as particularly important and noteworthy.
 
