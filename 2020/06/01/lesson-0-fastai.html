@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Thoughts on Lesson 0 - How to fastai | Christian Mondorf</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Thoughts on Lesson 0 - How to fastai" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recently, a new lesson was added to the fast.ai course. This lesson wasn’t added to the end of the lessons already posted, but instead is meant to be seen before the current set of published lessons. In this post I highlight a few key points that struck me as particularly important and noteworthy." />
+<meta property="og:description" content="Recently, a new lesson was added to the fast.ai course. This lesson wasn’t added to the end of the lessons already posted, but instead is meant to be seen before the current set of published lessons. In this post I highlight a few key points that struck me as particularly important and noteworthy." />
+<link rel="canonical" href="https://cmondorf.github.io/blog/2020/06/01/lesson-0-fastai.html" />
+<meta property="og:url" content="https://cmondorf.github.io/blog/2020/06/01/lesson-0-fastai.html" />
+<meta property="og:site_name" content="Christian Mondorf" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-01T00:00:00-05:00" />
+<script type="application/ld+json">
+{"url":"https://cmondorf.github.io/blog/2020/06/01/lesson-0-fastai.html","@type":"BlogPosting","headline":"Thoughts on Lesson 0 - How to fastai","dateModified":"2020-06-01T00:00:00-05:00","datePublished":"2020-06-01T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://cmondorf.github.io/blog/2020/06/01/lesson-0-fastai.html"},"description":"Recently, a new lesson was added to the fast.ai course. This lesson wasn’t added to the end of the lessons already posted, but instead is meant to be seen before the current set of published lessons. In this post I highlight a few key points that struck me as particularly important and noteworthy.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://cmondorf.github.io/blog/feed.xml" title="Christian Mondorf" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QT6EZDLP8B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QT6EZDLP8B');
+</script>
+
+
+<link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Christian Mondorf</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Thoughts on Lesson 0 - How to fastai</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-01T00:00:00-05:00" itemprop="datePublished">
+        Jun 1, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Recently, a new lesson was added to the fast.ai course. This lesson wasn’t added to the end of the lessons already posted, but instead is meant to be seen before the current set of published lessons. In this post I highlight a few key points that struck me as particularly important and noteworthy.</p>
+
+<h2 id="1-teach-the-whole-game">1. Teach the whole game</h2>
+
+<p>Fast.ai is many things. It’s a library that runs on top of Pytorch and makes it much easier to work with, it’s a book on deep learning, a course, and even an approach to learning and teaching. What makes it special is that the people behind the course have put a lot of thought into their teaching methodology and have an explicit goal of breaking down barriers and making deep learning accessible.</p>
+
+<p>What sets this course apart from other more traditional courses is that it embraces a top-down approach to teaching. This philosophy was pionered by David Perkins, a professor of education at Harvard. He lays out his approach to teaching here:</p>
+
+<p><a href="https://www.youtube.com/watch?v=JRQY01Hhrww"><img src="https://img.youtube.com/vi/JRQY01Hhrww/0.jpg" alt="IMAGE ALT TEXT HERE" /></a></p>
+
+<p>The main idea is that you should teach “the whole game”. He describes the example of teaching baseball. You don’t initially teach people about aerodynamics, the physics of acceleration and friction which act on the ball, the psychology of team sports, the architecture of fields, etc. Instead you explain enough for them to start playing. Then, with practice they iteratively improve over time.</p>
+
+<p>Perkins has distilled his approach to teaching through the following 7 principles:</p>
+
+<ol>
+  <li>Play the whole game. You may need to start with junior versions. You learn to ride a bicycle by actually riding a bicycle, but maybe don’t start on the <em>Tour de France</em>.</li>
+  <li>Make the game worth playing. Excitement and curiousity can be powerful allies on the journey to learn something.</li>
+  <li>Work on the hard parts. He talks about “zooming into the challenging bits”.  This can help you perfect some technique or practice an essential move.</li>
+  <li>Play out of town. Transfer is a tricky part of the learning game. I once read about a study of street children in Brazil who were able to perform complex computations in their head, but were totally unable to apply math skills in any other domain. Being able to take your skills with you is the mark of truely having internalized them.</li>
+  <li>Reveal the hidden game. In the case of baseball this would be strategy. I’m guessing in other domains this would be things like implicit knowledge. In learning theory explicit knowledge is what is written down in textbooks (chemical proceedures, for example) and implicit knowledge is stuff that isn’t written anywhere but is important (such as lab etiquette, perhaps).</li>
+  <li>Learn from the team. Make it social. As the saying goes “if you want to go fast, go alone, but if you want to go far go together.”</li>
+  <li>Learn the game of learning. This is important. We ignore metacognition at our peril. You see this all the time with language learning apps and courses that can’t possibly teach anyone a language. Often what sells these courses is the illusion of learning as opposed to actual results.</li>
+</ol>
+
+<h2 id="2-finish-the-damn-course-and-build-things-from-the-very-beginning">2. Finish the damn course, and build things from the very beginning</h2>
+
+<p>Here, Jeremy Howard mentions Radek Osmulski as an example both of what not to do, and what to do. Basically, we should avoid Radek’s initial approach which was to try to learn all the basics and fundamentals before building anything, and learn from his successful second run where he put building and coding front and center. By his own estimate, the winning fomula is 60% doing, 40% learning. 
+Radek has written an entire book about what he learned about learning fast.ai and deep learning generally. I’ve read the book and will write a review of it soon, so I won’t go further into it here.</p>
+
+<p>The main point to take home here is that, as Jeremy puts it “reading books and watching tutorials won’t get you there.” You’ll learn by doing, in the same way you won’t learn to ride a bike by reading about how to ride a bike. You’ll learn by getting on the bike (and falling!).</p>
+
+<h2 id="3-address-things-that-youre-missing">3. Address things that you’re missing</h2>
+
+<p>Here again Jeremy quotes Radek. Radek has written that mastering DL  relies on a four-legged table. The legs of the table are:</p>
+
+<ol>
+  <li>code concepts</li>
+  <li>mastering an IDE</li>
+  <li>mastering Git and GitHub</li>
+  <li>learning about ssh and linux to be able to use remote servers</li>
+</ol>
+
+<p>Of course, this raises the question of how to learn these things. A good place to start seems to be <a href="https://missing.csail.mit.edu/">The Missing Semester</a>. This is an MIT course that is available on youtube that covers these missing topics. I haven’t worked through this course but intend to and will write a review when I’ve finished it.</p>
+
+<h2 id="5-how-to-go-through-a-fastai-lesson">5. How to go through a fast.ai lesson</h2>
+
+<p>Both Jeremy and Radek mention four steps to go through when approaching a fast.ai lesson:</p>
+
+<ol>
+  <li>watch the lecture</li>
+  <li>run the notebook, experiment!</li>
+  <li>reproduce results</li>
+  <li>repeat with a different dataset</li>
+</ol>
+
+<p>This time around I haven’t been watching the lectures, though I intend to pick them up again. Instead, I’ve been participating in Weight’s and Biases’ <a href="https://wandb.ai/wandb_fc/events/reports/Welcome-to-the-Fastbook-Reading-Session---Vmlldzo3Mjk0Mjg?galleryTag=fastbook">reading group</a>. This has been a great experience as there’s a great social component there (the team Perkins talks about).</p>
+
+<p>However, I’ve been reading the book and then using the notebooks that correspond to each chapter. The nice thing is the entire book is available on github as runnable notebooks. Not only that, but they’re there in two versions. One is the book as it’s published, but the other is a set of ‘clean’ notebooks, that is to say notebooks with the code but no prose. Running the latter while reminding myself of the content of the prose is a great way to review.</p>
+
+<p>Another important piece of advice Jeremy gives is that when approaching a project generally, not just those mentioned in the book and course, you should aim to build a very basic end to end process that builds or processes a dataset, prepares the data, trains a model and makes inferences. This first iteration will probably not be very good, but it will allow you to solve challenges linked to setting up the end to end pipeline. With that ready it’s much easier to iterate and gradually improve.</p>
+
+<p>I’ve been building my own versions of the sample projects there, in effect steps 3 and 4, trying to increasingly step away from the examples and either build from what I remember or searching documentation or forums as appropriate. I intend to publish about those results here as they become available.</p>
+
+<h2 id="concluding-remarks">Concluding remarks</h2>
+
+<p>The rest of lesson 0 is mostly about how to run notebooks. Jeremy focuses on AWS and Google Colab as two easy ways to run fastbook’s notebooks. This is useful how-to that allows you to get set up and running code, but I won’t be covering it in this post as I wanted to focus here on the advice he was giving about how to learn fastai.</p>
+
+<p>I’m really excited about this course and about the reading group set up by Weights and Biases, and not only because of the topics we’re covering but also to see an example to this top-down learning approach in action.</p>
+
+  </div><a class="u-url" href="/blog/2020/06/01/lesson-0-fastai.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Python, deep learning, languages, teaching and learning</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/cmondorf" title="cmondorf"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/cmondorf" title="cmondorf"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
