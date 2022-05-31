@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Self-driving cars aren't cars
+title: "Self-driving cars aren't cars"
 subtitle: New post on Medium
 ---
 
