@@ -1,6 +1,6 @@
 ---
 layout: post
-title: We need to discuss frustration in learning to code
+title: "Notes from Spring: Start Here, Chapter 1"
 subtitle: New post on Medium
 ---
 
