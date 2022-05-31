@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "notes"
-subtitle: "Spring"
+title: We need to discuss frustration in learning to code
+subtitle: New post on Medium
 ---
 
 This first chapter mostly deals with what Spring is: the most used Java framework in the world today. 
