@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring Start Here- Chapter 1 notes
+title: Spring Start Here Chapter 1 notes
 subtitle: my notes from chapter 1 of Laurentiu Spilca's book on Spring
 ---
 
