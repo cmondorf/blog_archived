@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spring Start Here Chapter 1 notes
-subtitle: my notes from chapter 1 of Laurentiu Spilca's book on Spring
+subtitle: my notes from chapter 1 of Laurentiu Spilca s book on Spring
 ---
 
 This first chapter mostly deals with what Spring is: the most used Java framework in the world today. 
