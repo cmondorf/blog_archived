@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Notes from Spring: Start Here, Chapter 1"
-subtitle: New post on Medium
+title: "Notes from _Spring: Start Here_, Chapter 1"
+subtitle: "Notes from Chapter 1 of _Spring:start here_"
 ---
 
 This first chapter mostly deals with what Spring is: the most used Java framework in the world today. 
